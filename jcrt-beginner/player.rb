@@ -7,14 +7,14 @@ class Player
     if archer_detect(warrior.health)
       if warrior.feel.enemy?
         warrior.attack!
-      elsif warrior.health < 20
-        warrior.rest!
       else
         warrior.walk!
       end
     else
       if warrior.feel.enemy?
         warrior.attack!
+      elsif warrior.health < 20
+        warrior.rest!
       else
         warrior.walk!
       end
