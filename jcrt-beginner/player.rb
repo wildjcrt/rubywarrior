@@ -13,6 +13,8 @@ class Player
     else
       if warrior.feel.enemy?
         warrior.attack!
+      elsif warrior.feel.captive?
+        warrior.rescue!
       elsif warrior.health < 20
         warrior.rest!
       else
